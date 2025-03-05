@@ -13,6 +13,9 @@ model = joblib.load("model.pkl")
 def home():
     return jsonify({"message": "Flask server is running"})
 
+
+
+
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
