@@ -1,8 +1,9 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
+import HomePage from "./homepage";  // Importing correctly (Ensure the filename is 'homepage.jsx')
 
 function App() {
   const [features, setFeatures] = useState("");
@@ -21,16 +22,8 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Machine Learning Prediction</h1>
-      <input
-        type="text"
-        placeholder="Enter comma-separated values"
-        value={features}
-        onChange={(e) => setFeatures(e.target.value)}
-      />
-      <button onClick={handlePredict}>Predict</button>
-      {prediction !== null && <h2>Prediction: {prediction}</h2>}
+    <div> 
+      <HomePage />  {/* Correct way to call a component */}
     </div>
   );
 }
